@@ -1,0 +1,142 @@
+@import "variables";
+@import "globals";
+
+.container{
+    background: url(/images/bg-intro-desktop.png) no-repeat;
+    background-size: cover;
+    background-color: $Red;
+    padding: 108px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__content{
+        h1,p{
+            color: white;
+        }
+        h1{
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+    }
+    &__form{
+        &-header{
+            background-color: $Blue;
+            color: white;
+            font-weight: 600;
+            padding: 14px 56px;
+            margin-bottom: 20px;
+            border-radius: 0.5rem;
+            text-align: center;
+            span{
+                font-weight: 400;
+            }
+        }
+        &-body{
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 34px 38px;
+            form{
+                .form-control{
+                    position: relative;
+                    margin-bottom: 2rem;
+                    &.error{
+                        input{
+                            border: 2px solid $Red;
+                            padding: 19px;
+                        }
+                        i, small{
+                            visibility: visible;
+                        }
+                    }
+                    input{
+                        width: 100%;
+                        padding: 20px;
+                        border: 1px solid $Grayish-Blue;
+                        border-radius: 0.5rem;
+                        outline: none;
+                        caret-color: $Blue;
+                        &::placeholder{
+                            font-weight: 700;
+                        }
+                        &.active{
+                            border-color: $Blue;
+                        }
+                    }
+                    i{
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+                        visibility: hidden;
+                    }
+                    small{
+                        color: $Red;
+                        position: absolute;
+                        font-size: 12px;
+                        right: 0;
+                        top: 60px;
+                        visibility: hidden;
+                    }
+                }
+                button{
+                    background-color: $Green;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width: 100%;
+                    padding: 20px;
+                    border-radius: 0.5rem;
+                    border: none;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+            }
+            p{
+                color: $Grayish-Blue;
+                font-size: 12px;
+                text-align: center;
+                span{
+                    color: $Red;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+        background: url(/images/bg-intro-mobile.png) no-repeat;
+        background-size: cover;
+        background-color: $Red;
+        padding: 100px 24px;
+        &__content{
+            text-align: center;
+            p{
+                margin-bottom: 70px;
+            }
+        }
+        &__form{
+            &-header{
+                padding: 14px 80px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 600px){
+    .container{
+        &__content{
+            margin-right: 70px;
+            h1{
+                width: 400px;
+                font-size: 40px;
+            }
+            p{
+                width: 500px;
+            }
+        }
+        &__form{
+            width: 500px;
+        }
+    }
+}

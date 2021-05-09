@@ -1,0 +1,190 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 166px 80px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+}
+
+.container {
+  background: url(/images/bg-intro-desktop.png) no-repeat;
+  background-size: cover;
+  background-color: #ff7a7a;
+  padding: 108px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container__content h1, .container__content p {
+  color: white;
+}
+
+.container__content h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container__form-header {
+  background-color: #6055a5;
+  color: white;
+  font-weight: 600;
+  padding: 14px 56px;
+  margin-bottom: 20px;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.container__form-header span {
+  font-weight: 400;
+}
+
+.container__form-body {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 34px 38px;
+}
+
+.container__form-body form .form-control {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.container__form-body form .form-control.error input {
+  border: 2px solid #ff7a7a;
+  padding: 19px;
+}
+
+.container__form-body form .form-control.error i, .container__form-body form .form-control.error small {
+  visibility: visible;
+}
+
+.container__form-body form .form-control input {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #b9b6d3;
+  border-radius: 0.5rem;
+  outline: none;
+  caret-color: #6055a5;
+}
+
+.container__form-body form .form-control input::-webkit-input-placeholder {
+  font-weight: 700;
+}
+
+.container__form-body form .form-control input:-ms-input-placeholder {
+  font-weight: 700;
+}
+
+.container__form-body form .form-control input::-ms-input-placeholder {
+  font-weight: 700;
+}
+
+.container__form-body form .form-control input::placeholder {
+  font-weight: 700;
+}
+
+.container__form-body form .form-control input.active {
+  border-color: #6055a5;
+}
+
+.container__form-body form .form-control i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  visibility: hidden;
+}
+
+.container__form-body form .form-control small {
+  color: #ff7a7a;
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  top: 60px;
+  visibility: hidden;
+}
+
+.container__form-body form button {
+  background-color: #38cc8c;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.container__form-body p {
+  color: #b9b6d3;
+  font-size: 12px;
+  text-align: center;
+}
+
+.container__form-body p span {
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: url(/images/bg-intro-mobile.png) no-repeat;
+    background-size: cover;
+    background-color: #ff7a7a;
+    padding: 100px 24px;
+  }
+  .container__content {
+    text-align: center;
+  }
+  .container__content p {
+    margin-bottom: 70px;
+  }
+  .container__form-header {
+    padding: 14px 80px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .container__content {
+    margin-right: 70px;
+  }
+  .container__content h1 {
+    width: 400px;
+    font-size: 40px;
+  }
+  .container__content p {
+    width: 500px;
+  }
+  .container__form {
+    width: 500px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
